@@ -1,0 +1,100 @@
+# Create User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "abrar4",
+  "password" : "rahasia",
+  "name" : "abrar ramadava 4"
+}
+
+###
+
+# Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "abrar4",
+  "password" : "rahasia"
+}
+
+###
+
+# Get Current User
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 497b761b-54ed-4804-af59-e834188e8274
+
+###
+
+# Update Current User
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 497b761b-54ed-4804-af59-e834188e8274
+{
+  "name" : "abrar ramadava 40"
+}
+
+###
+
+# Logout User
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 497b761b-54ed-4804-af59-e834188e8274
+
+###
+
+# Create Product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+Accept: application/json
+Authorization:497b761b-54ed-4804-af59-e834188e8274
+
+{
+  "namaProduct" : "Laptop 1",
+  "deskripsi" : "baru",
+  "harga" : 50000,
+  "stok" : 10,
+  "warna" : "Silver 1",
+  "categori" : "Elektronik"
+}
+
+
+###
+
+# Get Product by ID
+GET http://localhost:3000/api/products/15
+Content-Type: application/json
+Accept: application/json
+Authorization: 497b761b-54ed-4804-af59-e834188e8274
+
+###
+
+# Update Product by ID
+PUT http://localhost:3000/api/products/15
+Content-Type: application/json
+Accept: application/json
+Authorization: 497b761b-54ed-4804-af59-e834188e8274
+
+{
+  "namaProduct": "Updated Laptop",
+  "deskripsi": "Updated baru",
+  "harga": 1800,
+  "stok": 8,
+  "warna": "Black 1",
+  "categori": "Elektronik"
+}
+
+###
+
+# Delete Product by ID
+DELETE http://localhost:3000/api/products/15
+Content-Type: application/json
+Accept: application/json
+Authorization: 497b761b-54ed-4804-af59-e834188e8274
